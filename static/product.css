@@ -1,0 +1,41 @@
+.products {
+            width: 80%;
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+}
+
+.product{
+            width: 80%;
+            margin-left: 10%;
+}
+
+.post_image {
+    width: 200px !important;
+}
+
+.dates{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments{
+    margin-top: 20px;
+}
+
+.comment{
+    background: #242b2e;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.categories {
+            width: 80%;
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+}

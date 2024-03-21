@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'product.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="products">
+        {% for item in items%}
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ item.name }}</h5>
+                      <h6 class="card-title">{{ item.price }}</h6>
+                      <a href="/shop/{{ item.id }}" class="card-link">More</a>
+
+                  </div>
+                </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from shop.views import greetings, cat_fact
+from shop.views import item_view, detail_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shop/greeting',  greetings),
     path('shop/cat_fact', cat_fact),
+    path('', item_view),
+    path('shop/<int:id>/', detail_view),
+
 ]

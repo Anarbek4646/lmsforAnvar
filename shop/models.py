@@ -16,3 +16,10 @@ class Client(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
     date_purchase = models.DateTimeField(auto_now_add=True)
 
+
+class Purchase(models.Model):
+    client = models.OneToOneField(Client, on_delete=models.CASCADE)
+    quantity = models.IntegerField()
+    date = models.DateTimeField(auto_now_add=True)
+    item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name='purchases')
+
